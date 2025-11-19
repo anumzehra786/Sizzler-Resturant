@@ -1,11 +1,9 @@
-     *{
-        box-sizing: border-box;
-        max-width: 100%;
+        body{
+       width: 100%;
+       overflow-x: hidden;
      }
-     
-
-
-     /* Loading Screen Styles */
+        
+        /* Loading Screen Styles */
         #loading-screen {
             position: fixed;
             top: 0;
@@ -67,9 +65,9 @@
 header{
     max-width: 100%;
     height: 90px;
+    background-color: black;
+      
 }
-
-
 
 nav ul li::after {
   content: '';
@@ -83,18 +81,10 @@ background: linear-gradient(90deg,rgba(224, 86, 42, 1) 0%, rgba(244, 171, 41, 1)
 }
 
 nav ul li:hover::after {
- width:100%;
+  width: 100%;
 }
 
-
-       body {
-            background: #1e1e1e;
-            color: #ffffff;
-            font-family: "Poppins", sans-serif;
-            overflow-x: hidden;
-        }
-
-blok:nth-of-type(odd) {
+.blok:nth-of-type(odd) {
 background-color:white;
 }
     
@@ -194,69 +184,19 @@ background-color:#B58C67;
 }
 
 .home{
-    background:url(../images/Screenshot\ 2025-11-07\ 191059.png) ;
-    background-size: cover;
-    background-position: center;
+    width: 100%;
     height: 600px;
-    
-  max-width: 100%;
-  overflow-x: hidden;
+    background: url('../images/menu-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+      
 }
 
-.app{
-    font-size: 15px;
-    background-color: #C39771;
-    width: 200px;
-    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0 100%, 7% 50%, 0 0);
-}
-
-.clr{
-    color: #C39771 !important;
-}
-
-.mvv{
-  margin-top: 50px;
-  background-color: rgba(72, 71, 71, 0.3);
-  width: 100%;
-  height: 50px;
-  display: flex;
-  border-radius: 50px;
-  justify-content: space-around;
-  align-items: center;
-}
-.circle{
-  width: 5px;
-  height: 5px;
-  background-color: #C39771;
-  border-radius: 100%;
-}
-
-.hclr{
-  transition: 0.2s;
-}
-
-.hclr:hover{
-  color: #C39771 !important;
-}
-
-.fnt{
-  font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-.fnt-top{
-  font-size: 25px;
-}
-
-.fnt-h1{
-  font-size: 30px;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-.img{
-  border-radius:10%;
-}
-
+        body {
+            background: #1e1e1e;
+            color: #ffffff;
+            font-family: "Poppins", sans-serif;
+        }
 
         .reserve-section {
             padding: 80px 0;
@@ -283,9 +223,6 @@ background-color:#B58C67;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.08);
-             max-width: 100%;
-  height: auto;
-  box-sizing: border-box;
         }
 
         .btn-reserve {
@@ -299,8 +236,21 @@ background-color:#B58C67;
             color: #fff;
         }
 
+        footer {
+            background: #191919;
+            padding: 60px 0;
+        }
 
- footer{
+        .social-icons i {
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 50%;
+            background: #2b2b2b;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+         footer{
     max-width: 100%;
     /* height: 400px; */
  background: #191919;
@@ -347,7 +297,6 @@ background-color:#B58C67;
         footer p{
             transition: 0.3s;
             cursor: default;
-            overflow: hidden;
         }
 
         footer p:hover{
@@ -365,12 +314,8 @@ footer .img{
     height: 190px;
     /* margin-left: 33px; */
     display: flex;
-  
-   
-  justify-content: space-around;
+    justify-content: space-between;
 }
-
-
 
 footer .box{
     width: 83px;
@@ -457,49 +402,7 @@ footer .box5:hover{
     transform: scale(1.1);
 }
 
-.row{
-    margin-left: 0 !important;
-  margin-right: 0 !important;
-  overflow: hidden;
-}
-.container, .container-fluid, footer, section, div {
+.container, .container-fluid,  footer, section, div {
   max-width: 100%;
   overflow: hidden;
 }
-
-
-
-
-@media (max-width: 1024px) {
-
-  .mvv {
-    flex-direction: column;
-    height: auto;
-    gap: 10px;
-    padding: 10px;
-  }
-
-  .reserve-text h1 {
-    font-size: 28px;
-  }
-
-  footer .img {
-    justify-content: center;
-  }
-
-  .home {
-    height: 400px;
-  }
-
-  .fnt{
-    font-size: medium;
-  }
-}
-
-
-@media (max-width:600px){
-    .fnt{
-    font-size: xx-small;
-  }
-}
-
