@@ -1,20 +1,20 @@
-$(document).ready(function(){
-$(function(){
-  function showSection(btnSelector, sectionSelector){
-    // reset headings and sections
-    $(".mvv h6").addClass("hclr").removeClass("clr");
-    $("#mission, #vision, #value").addClass("d-none");
-    // activate clicked
-    $(btnSelector + " h6").addClass("clr").removeClass("hclr");
-    $(sectionSelector).removeClass("d-none");
-  }
+// Scroll animation for chef cards
+const chefCards = document.querySelectorAll('[data-animate]');
 
-  $("#m-btn").on("click", function(e){ e.preventDefault(); showSection("#m-btn", "#mission"); });
-  $("#vis-btn").on("click", function(e){ e.preventDefault(); showSection("#vis-btn", "#vision"); });
-  $("#val-btn").on("click", function(e){ e.preventDefault(); showSection("#val-btn", "#value"); });
-});
+function revealOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+  chefCards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+    if (cardTop < triggerBottom) {
+      card.classList.add('show');
+    } else {
+      card.classList.remove('show');
+    }
+  });
+}
 
-})
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
 
   setTimeout(function() {
             const loadingScreen = document.getElementById('loading-screen');
@@ -23,6 +23,7 @@ $(function(){
                 loadingScreen.style.display = 'none';
             }, 800);
         }, 3000);
+
 
         
 //Scroll back to top

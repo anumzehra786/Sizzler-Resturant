@@ -1,20 +1,20 @@
-$(document).ready(function(){
-$(function(){
-  function showSection(btnSelector, sectionSelector){
-    // reset headings and sections
-    $(".mvv h6").addClass("hclr").removeClass("clr");
-    $("#mission, #vision, #value").addClass("d-none");
-    // activate clicked
-    $(btnSelector + " h6").addClass("clr").removeClass("hclr");
-    $(sectionSelector).removeClass("d-none");
-  }
+// Optional animation effect when scrolling or clicking image
 
-  $("#m-btn").on("click", function(e){ e.preventDefault(); showSection("#m-btn", "#mission"); });
-  $("#vis-btn").on("click", function(e){ e.preventDefault(); showSection("#vis-btn", "#vision"); });
-  $("#val-btn").on("click", function(e){ e.preventDefault(); showSection("#val-btn", "#value"); });
+
+
+
+ AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out'
+    });
+
+
+document.querySelectorAll('.gallery-grid img').forEach(img => {
+  img.addEventListener('click', () => {
+    img.classList.add('zoom');
+    setTimeout(() => img.classList.remove('zoom'), 500);
+  });
 });
-
-})
 
   setTimeout(function() {
             const loadingScreen = document.getElementById('loading-screen');
